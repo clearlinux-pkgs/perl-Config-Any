@@ -4,7 +4,7 @@
 #
 Name     : perl-Config-Any
 Version  : 0.32
-Release  : 10
+Release  : 11
 URL      : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Config-Any-0.32.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Config-Any-0.32.tar.gz
 Summary  : Load configuration from different file formats, transparently
