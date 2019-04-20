@@ -4,10 +4,10 @@
 #
 Name     : perl-Config-Any
 Version  : 0.32
-Release  : 9
+Release  : 10
 URL      : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Config-Any-0.32.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Config-Any-0.32.tar.gz
-Summary  : 'Load configuration from different file formats, transparently'
+Summary  : Load configuration from different file formats, transparently
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 BuildRequires : buildreq-cpan
@@ -22,6 +22,7 @@ transparently
 Summary: dev components for the perl-Config-Any package.
 Group: Development
 Provides: perl-Config-Any-devel = %{version}-%{release}
+Requires: perl-Config-Any = %{version}-%{release}
 
 %description dev
 dev components for the perl-Config-Any package.
