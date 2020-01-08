@@ -4,12 +4,13 @@
 #
 Name     : perl-Config-Any
 Version  : 0.32
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Config-Any-0.32.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Config-Any-0.32.tar.gz
-Summary  : Load configuration from different file formats, transparently
+Summary  : 'Load configuration from different file formats, transparently'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
+Requires: perl-Config-Any-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Module::Pluggable::Object)
 
@@ -28,14 +29,24 @@ Requires: perl-Config-Any = %{version}-%{release}
 dev components for the perl-Config-Any package.
 
 
+%package perl
+Summary: perl components for the perl-Config-Any package.
+Group: Default
+Requires: perl-Config-Any = %{version}-%{release}
+
+%description perl
+perl components for the perl-Config-Any package.
+
+
 %prep
 %setup -q -n Config-Any-0.32
+cd %{_builddir}/Config-Any-0.32
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -45,7 +56,7 @@ else
 fi
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
@@ -65,14 +76,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Config/Any.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Config/Any/Base.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Config/Any/General.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Config/Any/INI.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Config/Any/JSON.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Config/Any/Perl.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Config/Any/XML.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Config/Any/YAML.pm
 
 %files dev
 %defattr(-,root,root,-)
@@ -84,3 +87,14 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Config::Any::Perl.3
 /usr/share/man/man3/Config::Any::XML.3
 /usr/share/man/man3/Config::Any::YAML.3
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/Config/Any.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Config/Any/Base.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Config/Any/General.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Config/Any/INI.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Config/Any/JSON.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Config/Any/Perl.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Config/Any/XML.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Config/Any/YAML.pm
