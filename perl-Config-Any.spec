@@ -90,11 +90,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.32.1/Config/Any.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Config/Any/Base.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Config/Any/General.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Config/Any/INI.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Config/Any/JSON.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Config/Any/Perl.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Config/Any/XML.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Config/Any/YAML.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Config/Any.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Config/Any/Base.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Config/Any/General.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Config/Any/INI.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Config/Any/JSON.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Config/Any/Perl.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Config/Any/XML.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Config/Any/YAML.pm
