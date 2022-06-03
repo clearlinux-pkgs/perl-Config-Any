@@ -4,7 +4,7 @@
 #
 Name     : perl-Config-Any
 Version  : 0.32
-Release  : 21
+Release  : 22
 URL      : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Config-Any-0.32.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/H/HA/HAARG/Config-Any-0.32.tar.gz
 Summary  : 'Load configuration from different file formats, transparently'
@@ -90,11 +90,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Config/Any.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Config/Any/Base.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Config/Any/General.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Config/Any/INI.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Config/Any/JSON.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Config/Any/Perl.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Config/Any/XML.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Config/Any/YAML.pm
+/usr/lib/perl5/*
